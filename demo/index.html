@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>品质户型大改造</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <script type="text/javascript">
+    </script>
+    <link href="css/iSlider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    #view{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    #iSlider-wrapper {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .public_pageNum {
+        position: absolute;
+        bottom: 20px;
+        right: 0px;
+        width: 30px;
+        height: 20px;
+        z-index: 996;
+    }
+    
+    .public_pageNum > span:nth-child(1) {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background: url(img/pageNum.png) -30px 0px no-repeat, url(img/pageNum.png) -30px 10px no-repeat;
+        background-size: 60px;
+        opacity: 0.5;
+    }
+    
+    .public_pageNum > span:nth-child(2) {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 20px;
+        background: url(img/pageNum.png) -30px 0px no-repeat;
+        background-size: 60px;
+        -webkit-animation: pageNum 1.5s infinite;
+    }
+    
+    .page {
+        width: 320px;
+        height: 504px;
+        background-size: 320px 504px;
+    }
+    
+    #page1 {
+        background-image: url(img/bg/01.jpg);
+    }
+    
+    .tit {
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: opacity .6s linear, -webkit-transform .6s;
+    }
+    
+    #t1 {
+        background-image: url(img/0/x1.png);
+        width: 125px;
+        height: 31px;
+        background-size: 125px 31px;
+        left: 106px;
+        top: 390px;
+        -webkit-transform: translate(0, -100%);
+    }
+    
+    #t2 {
+        background-image: url(img/0/x2.png);
+        width: 100px;
+        height: 55px;
+        background-size: 100px 55px;
+        left: 47px;
+        top: 396px;
+        -webkit-transform: translate(-100%, 0);
+    }
+    
+    #t3 {
+        background-image: url(img/0/x3.png);
+        width: 122px;
+        height: 50px;
+        background-size: 122px 50px;
+        left: 23px;
+        top: 425px;
+        -webkit-transform: translate(-100%, 0);
+    }
+    
+    #t4 {
+        background-image: url(img/0/x4.png);
+        width: 150px;
+        height: 53px;
+        background-size: 150px 53px;
+        left: 147px;
+        top: 424px;
+        -webkit-transform: translate(100%, 0);
+    }
+    
+    #t1.show,
+    #t2.show,
+    #t3.show,
+    #t4.show {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+    }
+    
+    .text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        -webkit-transform: translate(0, 100%);
+        transform: translate(0, 100%);
+        -webkit-transition: opacity .3s linear, -webkit-transform .3s;
+        transition: opacity .3s linear, transform .3s;
+        z-index: 995;
+    }
+    
+    .text.show {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    
+    #text1 {
+        background-image: url(img/0/a2_b.jpg);
+        width: 320px;
+        height: 262px;
+        background-size: 320px 262px;
+    }
+    
+    @-webkit-keyframes pageNum {
+        0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            opacity: 0;
+        }
+        1% {
+            -webkit-transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        49% {
+            -webkit-transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        50% {
+            -webkit-transform: translate3d(0, 10px, 0);
+            opacity: 0;
+        }
+        51% {
+            -webkit-transform: translate3d(0, 10px, 0);
+            opacity: 1;
+        }
+        99% {
+            -webkit-transform: translate3d(0, 10px, 0);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: translate3d(0, 10px, 0);
+            opacity: 0;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="view">
+        <div id="iSlider-wrapper"></div>
+    </div>
+    <script type="text/javascript" src="js/pcauto1.1.js"></script>
+    <script type="text/javascript" src="js/iSlider.js"></script>
+    <script type="text/javascript" src="js/iSlider.plugin.dot.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/pageResponse.min.js"></script>
+     <script>
+    window.onload = window.onresize = function() {
+        pageResponse({
+            selectors: '#iSlider-wrapper', //模块选择器，使用querySelectorAll的方法
+            mode: 'spread', // auto || contain || cover 
+            width: '320', //输入页面的宽度，只支持输入数值，默认宽度为320px
+            height: '504' //输入页面的高度，只支持输入数值，默认高度为504px
+        })
+    }
+     </script>
+<script src="http://js.3conline.com/wap/common/wxApi.min.js" charset="utf-8" class=" defer"></script>
+<script>
+wxApi.init(function() {
+    var shareData = {
+        title: "品质户型大改造",
+        desc: "到装修风格的确定，小到一个开关的选择，都蕴含了对家的希冀。想要提升家居品质，细微之处不容小觑，看看这些家装改造案例，能否给你带来一些灵感呢？",
+        link: "http://www1.pchouse.com.cn/magazine/boboTest/20160203/shinaide/demo1/index.html",
+        imgUrl: "http://www1.pchouse.com.cn/magazine/boboTest/20160203/shinaide/demo1/img/share.jpg"
+    };
+    wx.onMenuShareAppMessage(shareData); // 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+    wx.onMenuShareTimeline(shareData); // 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+    wx.onMenuShareQQ(shareData); // 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+    wx.onMenuShareWeibo(shareData); // 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+});
+</script>
+</body>
+
+</html>

@@ -5,8 +5,8 @@ function pageResponse(opt) {
         android = ua.match(/(Android);?[\s\/]+([\d.]+)?/),
 
         // 设备宽高初始比例
-        dw = document.documentElement.clientWidth,
-        dh = document.documentElement.clientHeight,
+        dw = window.innerWidth,
+        dh =window.innerHeight,
         ds = dw / dh,
 
         // 页面宽高初始比例
